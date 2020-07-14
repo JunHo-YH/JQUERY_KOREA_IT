@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>탐색</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // #content1을 기준으로 pink 적용
+        $("#content1").find(".doc").find('p').css("background", "pink")
+        $("#content1").find(".doc").children('p').css("background", "pink")
+        $("#content1").children("div").find('p').css("background", "pink")
+        $("#content1").children("div").children('p').css("background", "pink")
+        $("#content1").find(".doc p").css("background", "pink")
+
+        // .doc를 기준으로 skyblue
+        $(".doc").parent().next().find("ul").css('background', 'skyblue')
+        // #list를 기준으로 red
+        $("#list").parent().prev().find(".doc h1").css("color", "red")
+
+      });
+    </script>
+</head>
+<body>
+    <div id="content1">
+        <h1>Lorem Ipsum</h1>
+        <div class="doc">
+            <h1>jQuery Start</h1>
+            <p>Lorem Ipsum is simply...</p>
+        </div>
+        <p>Lorem Ipsum is simply...</p>
+    </div>
+    <div id="content2">
+        <ul id="list">
+            <li>Lorem Ipsum1</li>
+            <li>Lorem Ipsum2</li>
+            <li>Lorem Ipsum3</li>
+        </ul>
+    </div>
+</body>
+</html>
