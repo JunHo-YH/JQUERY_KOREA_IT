@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> attribute선택자</title>
+<!-- jQuery library -->
+<script src="jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+<ul>
+	<li><a href="http://ejungle.co.kr/"    id="main"    title="아카데미정글">아카데미정글</a></li>
+	<li><a href="http://www.jeumedia.com/" class="menu" title="제우미디어">제우미디어</a></li>
+	<li><a href="http://www.yes24.com" title="yes24">yes24</a></li>
+	<li><a href="#page2" title="page2">2 페이지로 이동</a></li>
+</ul>
+
+<div id="gallery">
+	<img src="sample1.png" alt="사진1" />
+   	<img src="sample2.png"  />
+</div>
+
+<!---------- jQuery code Start ---------->
+
+<script>
+	
+	// lclass 속성을 가진 노드
+	$("li a[class]").css("font-size","30px");
+
+	// href 속성 값이 #page2인 노드
+	$("li a[href='#page2']").css("text-decoration","none");
+
+	// href 속성 값이 http로 시작하는 노드
+	$("li a[href^='http']").css("color","red");
+
+	// href 속성 값이 com으로 끝나는 노드
+	$("li a[href$='com']").css("border","2px #f00 dashed");
+
+	// href 속성 값이  2를 포함하는 노드
+	$("[href*='2']").css("border","2px #f00 dashed");
+
+	// src 속성 값이 sample1.png 외의 노드
+	$("img[src !='sample1.png']").css("border","2px #f00 dashed");
+
+	// 속성중에 src와 alt를 모두 가지고 있는 노드
+	$("[src][alt]").css("border","2px #f00 dashed");
+	 
+</script>
+
+</body>
+</html>
