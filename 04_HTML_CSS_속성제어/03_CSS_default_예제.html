@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<!-- jQuery library -->
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<div>test</div>
+
+	<!---------- jQuery code Start ---------->
+	<script>
+
+			// $("div").attr("id", "box").attr("class", "box");
+			$("div").attr({ id: "box", class: "box"})
+
+			// $("div").css("width", "200px")
+			// 				.css("height", "200px")
+			// 				.css("background", "red")
+			// if($("div").css({width: 200})) 조건문에서는 단위가 반드시 들어가야 한다.
+			$("div").css({width: 200,
+										height: 200,
+										background: "red",
+										color: "#fff",
+										fontSize: 50,
+										margin : "50px 0 0 50px",
+										lineHeight: "200px"})
+
+										//하이폰이 들어간 문자는 두번째 단어를 대문자로 바꾸고 하이폰을 지워준다.
+										// lineHeight는 절대로 px을 지우면 안된다. % 단위로 바뀜.
+										//margin의 값 처럼 여러 가지가 들어가게 되면 px을 생략할 수 없다.
+
+	</script>
+
+
+
+
+
+</body>
+</html>
