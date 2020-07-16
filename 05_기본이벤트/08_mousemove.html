@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mousemove()</title>
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<img src="flower.jpg" alt="꽃" />
+
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+
+	<!---------- jQuery code Start ---------->
+	<script type="text/javascript">
+
+		// mousemove( )는 특정 태그 위에서 마우스 포인터가 움직이는 경우에 실행
+		// pageX, pageY, clientX,clientY: 웹브라우저에서 문서가 출력되는 영역에서의 XY좌표 값을 가짐
+
+		// 마우스가 이미지 위에서 움직일 때 좌표값 출력하기
+		$("img").on("mousemove", function() {
+			$("p:eq(0)").text("offsetX: " + event.offsetX + ", offsetY: " + event.offsetY)
+			$("p:eq(1)").text("clientX: " + event.clientX + ", clientY: " + event.clientY)
+			$("p:eq(2)").text("pageX: " + event.pageX + ", pageY: " + event.pageY)
+			$("p:eq(3)").text("screenX: " + event.screenX + ", screenY: " + event.screenY)
+		})
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+</body>
+</html>

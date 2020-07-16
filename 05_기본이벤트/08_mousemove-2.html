@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>마우스 따라다니기</title>
+    <style>
+      img { position: absolute; }
+    </style>
+    <script src="../jquery-3.5.1.js"></script>
+  </head>
+  <body>
+    <img src="jellyfish.jpg" alt="해파리">
+
+    <script>
+      $(document).on('mousemove', function() {
+        $('img').css({ left: event.pageX, top: event.pageY})
+      })
+
+    </script>
+
+  </body>
+</html>
