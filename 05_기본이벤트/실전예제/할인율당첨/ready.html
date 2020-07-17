@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jump for Joy</title>
+		<link href="styles/my_style.css" rel="stylesheet">
+		<script src="scripts/jquery-1.7.2.min.js"></script>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<h2>Jump for Joy Sale</h2>
+		</div>
+		<div id="main">
+			<div class="guest_box"><img src="images/jump1.jpg"/></div>
+			<div class="guest_box"><img src="images/jump2.jpg"/></div>
+			<div class="guest_box"><img src="images/jump3.jpg"/></div>
+			<div class="guest_box"><img src="images/jump4.jpg"/></div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$(".guest_box").on('click', function() {
+					var n = Math.ceil(Math.random() * 5) * 10;
+					$("#main").append("<p>Your discound is" + n +"%</p>")
+					$(".guest_box").off();
+				})
+			})
+		</script>
+
+	</body>
+</html>
