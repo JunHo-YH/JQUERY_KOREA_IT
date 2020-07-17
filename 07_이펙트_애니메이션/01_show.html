@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> hide() / show()  </title>
+<style type="text/css">
+	div { width: 200px;
+		   height: 200px;
+		   background: red;
+		   display: none;
+			 /* visibility: hidden; */
+		  }
+</style>
+<!-- jQuery library -->
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<button>표시</button>
+	<div></div>
+
+
+
+	<!---------- jQuery code Start ---------->
+	<script type="text/javascript">
+	$("button").on('click', function() {
+		// $("div").css({ display: "block"})
+		// $("div").show("slow"); //display : "block"과 같은 효과  // visibility는 제어하지 못한다.
+															//show : 그 요소가 가지고 있는 원래 성질을 돌려주는 기능.
+		$("div").show(1000, "linear", function() {
+			$(this).css({ backgroundColor: "blue"})
+		});    // slow: 600, noraml: 400, fast: 200     // swing: 기본값, linear: 더 느리게
+
+	})
+
+
+
+
+
+
+
+
+		//});
+
+	</script>
+
+
+
+
+
+</body>
+</html>

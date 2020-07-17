@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> show()  </title>
+<style type="text/css">
+	div { width: 200px;
+		   height: 200px;
+		   background: red;
+		   display: none;
+		  }
+</style>
+<!-- jQuery library -->
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<button id="show">표시</button>
+	<button id="hide">비표시</button>
+	<div></div>
+
+
+
+	<!---------- jQuery code Start ---------->
+	<script type="text/javascript">
+
+	$("#show").on('click', function() {
+		$("div:not(:animated)").show(2000, "linear")
+	})
+
+	$("#hide").on('click', function() {
+		$("div:not(:animated)").hide(2000, "linear")
+	})
+
+
+
+
+		//});
+
+	</script>
+
+
+
+
+
+</body>
+</html>

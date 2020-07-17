@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> fadeIn() / fadeOut() </title>
+<style type="text/css">
+	img { display:none; }
+</style>
+<!-- jQuery library -->
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<img src="flower.jpg" alt="flower" />
+
+
+
+	<!---------- jQuery code Start ---------->
+	<script>
+		/*
+		setTimeout(function() {
+			$('img').fadeIn();
+		}, 2000)
+		*/
+
+		/*
+		function fading() {
+			$("img").fadeIn();
+		}
+		setTimeout(fading, 3000)
+		*/
+		function fading() {
+			$('img').fadeToggle(1000); // toggle이 실행되는 시간이 필요하기 때문에 setInterval의 시간보다 toggle의 시간이 더 길면 정상적으로 작동하지 않는다.
+		}
+		setInterval(fading, 3000)
+
+
+	</script>
+
+
+
+
+
+
+</body>
+</html>

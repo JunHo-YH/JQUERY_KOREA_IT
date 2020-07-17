@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        div {
+              width: 800px; margin: 0 auto;
+              border: 1px solid #000;}
+        ul {  overflow: hidden; margin:0; padding: 0;}
+        li { list-style: none;
+              width: 300px hieght: 300px;
+            float: left;
+          border: 1px solid #000;
+          background: #8cb9fc;
+        display: none;}
+        li:last-of-type { float: right; }
+    </style>
+    <script src="../jquery-3.5.1.js"></script>
+  </head>
+  <body>
+
+    <div>
+      <button>slide left</button>
+      <button>slide right</button>
+      <br>
+      <br>
+
+      <ul>
+        <li>slide left</li>
+        <li>slide right</li>
+      </ul>
+    </div>
+    <script>
+      $("button:eq(0)").on('click', function() {
+        $("li:eq(0)").show(1000)
+      })
+      $("button:eq(1)").on('click', function() {
+        $("li:eq(1)").show(1000)
+      })
+    </script>
+
+  </body>
+</html>
