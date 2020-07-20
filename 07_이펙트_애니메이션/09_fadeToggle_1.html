@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title> fadeToggle() </title>
 <!-- jQuery library -->
-<script src="jquery-1.7.2.min.js"></script>
+<script src="../jquery-3.5.1.js"></script>
 </head>
 <body>
 
@@ -16,6 +16,10 @@
 <!---------- jQuery code Start ---------->
 <script >
 		$("#fade").on('click', function() {
+			$("p:not(:animated)").fadeToggle(1000)
+		})
+
+		$("#fade").on('click',function() {
 			$("p:not(:animated)").fadeToggle(1000)
 		})
 

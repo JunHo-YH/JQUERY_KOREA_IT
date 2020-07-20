@@ -13,7 +13,9 @@
 
 	<img src="flower.jpg" alt="flower" />
 
-
+	<button id="stop">stop</button>
+	<button id="play">play</button><br><br>
+	<img src="flower.jpg" alt="flower">
 
 	<!---------- jQuery code Start ---------->
 	<script>
@@ -32,7 +34,18 @@
 		function fading() {
 			$('img').fadeToggle(1000); // toggle이 실행되는 시간이 필요하기 때문에 setInterval의 시간보다 toggle의 시간이 더 길면 정상적으로 작동하지 않는다.
 		}
-		setInterval(fading, 3000)
+		setInterval(fading, 3000)  // 중지 => clearInterval(변수)
+
+
+		var timer = setInterval(fading, 2000)
+		$("#stop").on('click', function() {
+			clearInterval(timer)
+		})
+		
+
+		$("#play").on('click',function() {
+			timer = setInterval(fading, 2000)
+		})
 
 
 	</script>

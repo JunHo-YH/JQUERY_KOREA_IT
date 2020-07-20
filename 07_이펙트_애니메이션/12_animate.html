@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>animate()</title>
+        <style>
+            div { width: 100px; height:  100px; background: #6ab5bd;}
+            
+        </style>
+        <script src="../jquery-3.5.1.js"></script>
+    </head>
+    <body>
+
+        <a href="#">클릭</a>
+        <div></div>
+        <script>
+            $("a").on('click', function() {
+                // $("div").css("margin-left", "500px")
+                $("div").animate({marginLeft: 500,
+                                    width: 200,
+                                    height: 100,
+                                    opacity: 0.5}, 1000, "linear", function() {
+                //                  변할 속성        시간   속도감       기능
+                    $(this).animate({marginLeft: 8})
+                }) // animate는 반드시 축약형에만 적용이 된다.
+            })
+        </script>
+
+    </body>
+</html>
