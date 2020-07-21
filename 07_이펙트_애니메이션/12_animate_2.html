@@ -5,12 +5,10 @@
 <title> animate()  </title>
 <style>
 
-	div { width:400px; height:267px; overflow:hidden; border: 5px solid #f00;}
-	p { width:800px; height:267px; margin:0; } 
-	img {float: left;}
-	/* p태그에 width가 800인 이유 :  이동했을 때 이미지를 포함시킬 만큼의 넓이가 필요하기 때문이다.*/
-	/* 움직여 지는 것은 이미지가 아니라 p태그가 움직인다. */
-	
+	div { width:400px; height:267px; overflow: hidden; border: 5px solid #f00; }
+	p { width:800px; height:267px; margin:0; }
+	img { float: left;}
+
 </style>
 <!-- jQuery library -->
 <script src="jquery-1.7.2.min.js"></script>
@@ -19,29 +17,23 @@
 
 	<div>
 		<p>
-			<img src="flower.jpg" alt="flower" id="flower" /><img src="building.jpg" alt="building" id="building" />
+			<img src="flower.jpg" alt="flower" id="flower">
+			<img src="building.jpg" alt="building" id="building">
 		</p>
 	</div>
-	
-	
-		
+
 	<!---------- jQuery code Start ---------->
 	<script>
-		$("#flower").on('click', function() {
-			$("p").animate({marginLeft: -400});
-		})
-		$("#building").on('click', function() {
-			$("p").animate({marginLeft: 0}); 
-			// margin의 초기값은 0이기 때문에 원래대로 돌려놓으려면 margin: 0을 해야한다.
-		})
+			$("#flower").on('click', function() {
+				$("p").animate({ marginLeft: -400 })
+			})
+			$("#building").on('click', function() {
+				$("p").animate({ marginLeft: 0 })
+			})
 
-		
 	</script>
 
 
 
-
-
-	
 </body>
 </html>

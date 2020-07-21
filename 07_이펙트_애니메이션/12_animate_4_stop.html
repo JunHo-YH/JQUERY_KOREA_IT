@@ -27,7 +27,7 @@ a{text-decoration:none;}
 	position: relative;
 }
 #box4 {
-	background: #0FF;
+	background: #04bdbd;
 	height: 50px;
 	width: 50px;
 	position: relative;
@@ -44,7 +44,7 @@ a{text-decoration:none;}
 .animate({left: "0"}, 1000)<br />
 <br />
 <br />
-        
+
 <a href="#" id="startbtn1">효과시작</a> &nbsp; <a href="#" id="stopbtn1">stop(true,true)</a>
 <div id="box1"></div>
 <a href="#" id="startbtn2">효과시작</a> &nbsp; <a href="#" id="stopbtn2">stop(true,false)</a>
@@ -58,67 +58,67 @@ a{text-decoration:none;}
 <script type="text/javascript">
 
 $("#stopbtn1").click(function(){
-	
+
 	 $("#box1").stop(true,true)
 })
 
 $("#startbtn1").click(function(){
-	
+
 		$("#box1").animate({opacity: "0.1", left: "500"}, 1000)
 		.animate({opacity: "0.4", top: "0",  left:100, height: "100", width: "100"}, 1000)
 		.slideUp(1000)
 		.slideDown(1000)
 		.animate({left: "0"}, 1000)
 		return false;
-	
+
 });
 //----------------------------------------
 $("#stopbtn2").click(function(){
-	
+
 	 $("#box2").stop(true,false)
 })
 
 $("#startbtn2").click(function(){
-	
+
 		$("#box2").animate({opacity: "0.1", left: "500"}, 1000)
 		.animate({opacity: "0.4", top: "0",  left: 100, height: "100", width: "100"}, 1000)
 		.slideUp(1000)
 		.slideDown(1000)
 		.animate({left: "0"}, 1000)
 		return false;
-	
+
 });
 //-------------------------------------------
 $("#stopbtn3").click(function(){
-	
+
 	 $("#box3").stop(false,true)
 })
 
 $("#startbtn3").click(function(){
-	
+
 		$("#box3").animate({opacity: "0.1", left: "500"}, 1000)
 		.animate({opacity: "0.4", top: "0",  left: 100, height: "100", width: "100"}, 1000)
 		.slideUp(1000)
 		.slideDown(1000)
 		.animate({left: "0"}, 1000)
 		return false;
-	
+
 });
 //----------------------------------------------
 $("#stopbtn4").click(function(){
-	
+
 	 $("#box4").stop(false,false)
 })
 
 $("#startbtn4").click(function(){
-	
+
 		$("#box4").animate({opacity: "0.1", left: "500"}, 1000)
 		.animate({opacity: "0.4", top: "0",  left: 100, height: "100", width: "100"}, 1000)
 		.slideUp(1000)
 		.slideDown(1000)
 		.animate({left: "0"}, 1000)
 		return false;
-	
+
 });
 
 
