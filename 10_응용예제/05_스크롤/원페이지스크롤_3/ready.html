@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body {font:12px dotum #666;}
+li	{list-style:none;}
+ul,li,h2,ol	{margin:0; padding:0;}
+#scroll_type {width:500px; height:300px; margin:0 auto; border:1px solid #eee; background:#ddd; overflow:hidden;}
+#scroll_type ul	{width:150px; float:left;}
+#scroll_type ul	li	{cursor:pointer; padding:5px; overflow:hidden;}
+#scroll_type ul	li a {color:#666; text-decoration:none;}
+#scroll_type ul	li a.on {font-weight:bold;}
+#scroll_type .mask	{height:300px; overflow:hidden;}
+#scroll_type ol	{width:349px; position:relative; overflow:hidden; float:right; border-left:1px solid #eee;}
+#scroll_type ol li {width:349px; height:300px; overflow:hidden;}
+</style>
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<div id="scroll_type">
+	
+		<ul>
+			<li><a href="#" rel="#section_1">menu_1</a></li>
+			<li><a href="#" rel="#section_2">menu_2</a></li>
+			<li><a href="#" rel="#section_3">menu_3</a></li>
+		</ul>
+		
+		<div class="mask">
+		
+			<ol>
+				<li id="section_1">
+					<h2>scroll_position_1</h2>
+					<p>section_1</p>
+				</li>
+				<li id="section_2">
+					<h2>scroll_position_2</h2>
+					<p>section_2</p>
+				</li>
+				<li id="section_3">
+					<h2>scroll_position_3</h2>
+					<p>section_3</p>
+				</li>
+			</ol>
+			
+		</div>
+		
+	</div>
+
+	<script>
+	
+		$("#scroll_type ul li a").mouseover(function(){
+			
+
+
+		});
+		
+	</script>
+
+
+</body>
+</html>

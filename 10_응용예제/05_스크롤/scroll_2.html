@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<style>
+
+	body { height:1500px; font-size: 30px; }
+	div { margin-top: 100px; }
+	p { color:red; }
+	span { display:none; }
+	
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<div>Try scrolling the iframe.</div>
+	<p></p>
+	<p><span>Scroll happened!</span></p>
+	
+	
+	
+	<script>
+	
+		$(window).scroll(function () {
+		
+			$("span").css("display", "inline").fadeOut("slow");
+			
+			$("p:first").text($(window).scrollTop());
+			
+		});
+		
+	</script>
+
+</body>
+</html>

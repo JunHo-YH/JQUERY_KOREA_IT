@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery-1.7.2.min.js"></script>
+<style>
+
+	#target { overflow: scroll; padding: 10px;
+				  width: 300px; height: 200px; 
+				  margin-bottom: 20px;
+				  line-height:30px;
+				  background: #c5c5c5;
+				}
+	
+</style>
+</head>
+<body>
+
+	<div id="target">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna
+		aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+		ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		Duis aute irure dolor in reprehenderit in voluptate velit
+		esse cillum dolore eu fugiat nulla pariatur. Excepteur
+		sint occaecat cupidatat non proident, sunt in culpa qui
+		officia deserunt mollit anim id est laborum.
+	</div>
+	<div id="other">Trigger the handler</div>
+	<div id="log"></div>
+	
+	<script>
+	
+		$("#target").scroll(function() {
+		
+			$("#log").html("<div>Handler for .scroll() called.</div>");
+			
+		});
+		
+		$("#other").click(function() {
+		
+			$("#target").scroll();
+			
+		});
+
+	</script>
+	
+	
+	
+	
+</body>
+</html>

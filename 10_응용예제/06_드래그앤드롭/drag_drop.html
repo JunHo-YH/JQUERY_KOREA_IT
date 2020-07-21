@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+	* { margin: 0; padding: 0; }
+	html, body { height: 100%; }
+	
+	#floatWindow { position: absolute; top: 50px; left: 100px; 
+							width:300px; height: 200px; }
+	a.close { position:absolute; top: 5px; right: 5px; 
+					display: block; width: 50px; 
+					line-height: 40px; text-align: center; 
+					background: #fff; }
+	dl { width: 100%; height: 100%; border: 1px solid #000; }
+	dt { height:50px; line-height: 50px; background: #00f; 
+		  text-align: center; color: #fff; 
+		  cursor: move;}
+	
+</style>
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<a href="#floatWindow" class="open">윈도우야 나타나랏!</a>
+	
+	<div id="floatWindow">
+		<a href="#" class="close">닫기</a>
+		<dl>
+			<dt>드래그하세요</dt>
+			<dd>나 드래그되는고야?</dd>
+		</dl>
+	</div>
+	
+	<script>
+		
+		$("#floatWindow").hide();
+		
+		$("a.open").click(function(){
+			
+		});
+		
+		$("a.close").click(function(){
+			
+		});
+		
+		$("#floatWindow dt").mousedown(function(e){
+		
+			
+				
+			
+			$(document).mousemove(function(e){
+				$("#floatWindow").css({
+					top:e.pageY - $("#floatWindow").data("clickY")+"px",
+					left:e.pageX - $("#floatWindow").data("clickX")+"px"				
+				});
+			});
+			
+			console.log($("#floatWindow").data("clickX"));
+			console.log($("#floatWindow").data("clickY"));
+			console.log($("#floatWindow").css("top"));
+			console.log($("#floatWindow").css("left"));
+			
+		}).mouseup(function(){
+			
+
+
+		});
+		
+		
+	</script>
+	
+	
+	
+</body>
+</html>
