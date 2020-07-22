@@ -21,7 +21,7 @@
 	<script type="text/javascript">
 
 		// 버튼 클릭시 건물이미지 리스트를 추가하고, a 이벤트가 적용되도록
-		$("li a").live('click', function() {
+		$("li a").live('click', function() { //새로 추가한 것도 괄호 안의 명령어를 적용
 			var imgPath = $(this).attr('href');
 			var altText = $(this).text();
 			$("p img").attr({src: imgPath, alt: altText})
