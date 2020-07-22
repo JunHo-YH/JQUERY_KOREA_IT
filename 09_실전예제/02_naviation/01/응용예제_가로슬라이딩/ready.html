@@ -98,18 +98,25 @@
 		$("dt:first span").addClass("selected");
 		
 		$("dl dt").click(function(){
-		
-			// if문 활용
-		
-		}).mouseover(function(){
+			$("dd").not($(this).next()).animate({width: 0})
+			$(this).next().animate({width: 695})
+			$("dl dt span").removeClass("selected")
+			$(this).children().addClass("selected")
 			
-			// 마우스 오버시 클래스 over 추가
+		
+		}).mouseenter(function(){
+			$(this).children().addClass('over')
 			
-		}).mouseout(function(){
+			
+		}).mouseleave(function(){
+
+			$(this).children().removeClass('over')
 		
 			// 마우스 오버시 클래스 over 삭제
 
 		});
+
+		
 	
 	</script>
 	
