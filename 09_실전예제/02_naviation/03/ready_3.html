@@ -9,7 +9,7 @@
 
 	body {
 		margin: 20px auto;
-		padding: 0;	
+		padding: 0;
 		width: 600px;
 		font-size:13px;
 		font-family:Arial, Helvetica, sans-serif;
@@ -17,34 +17,34 @@
 	}
 
 	div#slider {
-		margin:0 auto; 
-		background:#FFF; 
-		width:600px; 
+		margin:0 auto;
+		background:#FFF;
+		width:600px;
 		border:#FDF6DD 2px solid;
 		margin-top:100px;
 		overflow:hidden;
-		position:relative; 
+		position:relative;
 	}
 
-	div#viewer { 
+	div#viewer {
 		height:350px;
-		position:relative; 
+		position:relative;
 	}
 
 	img{
-		
+
 		position:absolute;
 		left:0;
-		
+
 	}
 
 	img#image1{	left:0px;	top:0px;	}
 	img#image2{	left:600px;	top:0px;	}
 	img#image3{	left:1200px;	top:0px;	}
 	img#image4{	left:1800px;	top:0px;	}
-			
-			
-	/*--------   ul li CSS ------------ */		
+
+
+	/*--------   ul li CSS ------------ */
 	#btnGroup {
 		position:absolute;
 		bottom:2%;
@@ -52,73 +52,84 @@
 		margin:0;
 		padding:0;
 	}
-			   
+
 	#btnGroup li {
 		float:left;
-		width:16px; 
-		height:16px;			
+		width:16px;
+		height:16px;
 		list-style:none;
-		margin-right:6px;	
+		margin-right:6px;
 		background-color:#60F;
 		cursor:pointer;
 	}
-					
+
 	ul#btnGroup li a{
 		text-decoration:none;
 		text-align:center;
 		background:#FDF6DD;
 		display:block;
 		width:100%;
-		hiehgt:100%;
+		height:100%;
 		color:#000;
 	}
 
 	ul#btnGroup li a:hover{	background:#CCFF00;	}
 
 </style>
-</head>  
-    
+</head>
+
 <body>
 
 	<div id="slider">
-
 		<div id="viewer">
 			<img id="image1" src="image/slide1.jpg" alt="">
 			<img id="image2" src="image/slide2.jpg" alt="">
 			<img id="image3" src="image/slide3.jpg" alt="">
 			<img id="image4" src="image/slide4.jpg" alt="">
-		</div> 
-		
+		</div>
 	  <ul id="btnGroup">
 			<li id="btnLeft"><a href="#">◀</a></li>
-			<li id="btnRight"><a href="#">▶</a></li>     
+			<li id="btnRight"><a href="#">▶</a></li>
 	   </ul>
-		
 	</div>
 
-	<!---------- jQuery code Start ---------->        
+	<!---------- jQuery code Start ---------->
 	<script>
+		// 초기값
+		$("#viewer").css({ left: 0 })
 
-		
-		
-		
 		$("#btnLeft a").click(function () {
-			
-			
-			
-			return false;			
-		});	
-		
-		
-		$("#btnRight a").click(function () {	
-				
-			
-			
-			return false;			
-		});	
-		
-		
-		
+			if ( $("#viewer").css("left") == "0px" ) {
+				$("#viewer:not(:animated)").animate({ left: -1800 })
+			}
+			else {
+				$("#viewer:not(:animated)").animate({ left: "+=600px"})
+			}
+			return false;
+		});
+
+		$("#btnRight a").on('click', function () {
+			if ( $("#viewer").css("left") == "-1800px" ) {
+				$("#viewer:not(:animated)").animate({ left: 0 })
+			}
+			else {
+				$("#viewer:not(:animated)").animate({ left: "-=600px"})
+			}
+			return false;
+		});
+
+		var timer = setInterval(function() {
+				$("#btnRight a").click()
+		}, 3000)
+
+		$("#btnGroup li a").on('click', function() {
+			clearInterval(timer)
+			timer = setInterval(function() {
+					$("#btnRight a").click()
+			}, 3000)
+		})
+
+
 	</script>
 
 </body>
