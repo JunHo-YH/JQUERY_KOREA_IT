@@ -12,7 +12,7 @@
 <body>
 
 	<p>Rollover a menu item to expand it.</p>
-	
+
 	<ul>
 		<li class="green">
 			<p><a href="#">Home</a></p>
@@ -35,28 +35,19 @@
 			<p class="subtext">Legal things</p>
 		</li>
 	</ul>
-	
-	
+
+
 	<script>
-		
-			//Fix Errors - http://www.learningjquery.com/2009/01/quick-tip-prevent-animation-queue-buildup/
-			
-						
-			//When mouse rolls over
-			$("li").mouseover(function(){
-			
-				
-				
+
+			$("li").mouseenter(function(){
+				$(this).stop().animate({ height: 150 })
 			});
-			
-			//When mouse is removed
-			$("li").mouseout(function(){
-			
-				
-				
+
+			$("li").mouseleave(function(){
+				$(this).stop().animate({ height: 50 })
 			});
-			
+
 	</script>
-	
+
 </body>
 </html>

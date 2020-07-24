@@ -24,11 +24,11 @@ p,ul,li,ol,h2,dl,dt,dd	{margin:0; padding:0; list-style:none;}
 #gnb dl	dd a {display:block;padding:5px 5px 4px 5px;}
 #gnb dl	dd a:hover	{background:#eee;}
 </style>
-<script src="jquery-1.7.2.min.js"></script>	
+<script src="jquery-1.7.2.min.js"></script>
 </head>
 <body>
-	<!-- gnb -->			
-	<div id="gnb">					
+	<!-- gnb -->
+	<div id="gnb">
 		<ul>
 			<li><a href="#" class="menu1">웹하메뉴1</a>
 				<dl>
@@ -62,30 +62,16 @@ p,ul,li,ol,h2,dl,dt,dd	{margin:0; padding:0; list-style:none;}
 	<!--// gnb -->
 
 	<script>
-	
-		$('#gnb li').hover(
-		
-			function() {
-			
-				
 
-			}, 
-			
+		$('#gnb li').hover(
 			function() {
-			
-				
-				
-			}
-			
-		);
-		
-		
+				$(this).children("dl").slideDown();
+			},
+			function() {
+				$(this).children("dl").stop().slideUp();
+		});
+
 	</script>
-	
-	
-	
-	
-	
-	
+
 </body>
 </html>

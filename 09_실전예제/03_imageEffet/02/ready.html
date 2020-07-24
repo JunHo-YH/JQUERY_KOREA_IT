@@ -10,38 +10,76 @@
 		width:320px;
 		height:240px;
 		position:relative;
-		background:url(img/bg.jpg); 
+		background:url(img/bg.jpg);
 	}
-	 
+
 	div#ani img{
 		position:absolute;
-		display:none; 
+		display:none;
 	}
 </style>
 </head>
 
 <body>
 
-	<div id ="ani"></div>
+	<div id ="ani">
+
+	</div>
 
 
 
-	<!------------------------ jQuery 코드 ----------------------->
+	<!-- jQuery 코드 -->
 	<script>
-		
-		
-	
-	
-	
-	
-	
-	  
+
+		var count = 0;
+		var timerInterval;
+
+		function seq() {
+			for ( var i=0; i<21; i++ ) {
+				$("div#ani").append("<img src ='seq/seq"+i+".png'>");
+			}
+			$("#ani img:first").show();
+		}
+		seq();
+
+		$("#ani").hover(function() {
+			if ( timerInterval ) {
+				clearInterval(timerInterval)
+			}
+			timerInterval = setInterval(nextFrame, 100)
+		}, function() {
+			if ( timerInterval ) {
+				clearInterval(timerInterval)
+			}
+			timerInterval = setInterval(prevFrame, 100)
+		})
+
+		function nextFrame() {
+			count++;
+			if ( count > 20 ) {
+				count = 20;
+				clearInterval(timerInterval)
+			}
+			$("#ani img:visible").hide();
+			$("#ani img:eq("+ count +")").show();
+		}
+
+		function prevFrame() {
+			count--;
+			if ( count < 0 ) {
+				count = 0;
+				clearInterval(timerInterval)
+			}
+			$("#ani img:visible").hide();
+			$("#ani img:eq("+ count +")").show();
+		}
+
 	</script>
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 </body>
 </html>

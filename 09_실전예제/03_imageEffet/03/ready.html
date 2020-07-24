@@ -25,19 +25,24 @@ body {
 
 <body>
 
-<div id = "colorPicker">
-    <div>red</div>
-    <div>maroon</div>
-    <div>brown</div>
-    <div>orange</div>
-    <div>yellow</div>
-</div>
-      
-<!------------------------ jQuery 코드 ----------------------->
-<script>
+	<div id="colorPicker">
+	    <div>red</div>
+	    <div>maroon</div>
+	    <div>brown</div>
+	    <div>orange</div>
+	    <div>yellow</div>
+	</div>
 
- 
+<!-- jQuery 코드 -->
+<script>
+		$("#colorPicker div").each(function() {
+			var bgColor = $(this).text()
+			$(this).css({ backgroundColor: bgColor })
+			$(this).on('click', function() {
+				$("body").animate({ backgroundColor: bgColor })
+			})
+		})
+
 </script>
 </body>
 </html>
-
