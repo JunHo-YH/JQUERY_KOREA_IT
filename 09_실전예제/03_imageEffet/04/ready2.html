@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤오버</title>
+    <style>
+        #photo div { position: relative; overflow: hidden;
+                    width: 476px; height: 505px; float: left;}
+        #photo div img { position: absolute; top: 0; left: 476px;}
+    </style>
+    <script src="../../../jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div id="photo">
+        <div class="photo1"><img src="images/fit_over.jpg" alt=""></div>
+        <div class="photo2"><img src="images/frm_over.jpg" alt=""></div>
+        <div class="photo3"><img src="images/ldn_over.jpg" alt=""></div>
+    </div>
+    <script>
+        $("#photo div").each(function() {
+            pathName = $(this).children().attr('src')
+            console.log(pathName)
+            bgName = pathName.substr(7, 3)
+            console.log(bgName)
+            $(this).css({background: "url(images/"+bgName+".jpg)"
+            }).mouseenter(function() {
+               $(this).children().animate({left: 0})        // img의 절반을 기준으로 마우스가 나가는 방향으로 설명 이미지도 같이 나가도록 좌표값을 이용해서 만들어보기. 
+            }).mouseleave(function() {
+                $(this).children().animate({left: 476})
+            })
+        })
+    </script>
+    
+</body>
+</html>
