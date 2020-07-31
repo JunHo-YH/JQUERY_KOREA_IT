@@ -9,7 +9,7 @@
 
 	body {
 		margin: 20px auto;
-		padding: 0;	
+		padding: 0;
 		width: 600px;
 		font-size:13px;
 		font-family:Arial, Helvetica, sans-serif;
@@ -17,22 +17,22 @@
 	}
 
 	div#slider {
-		margin:0 auto; 
-		background:#FFF; 
-		width:600px; 
+		margin:0 auto;
+		background:#FFF;
+		width:600px;
 		border:#FDF6DD 2px solid;
 		margin-top:100px;
 		overflow:hidden;
-		position:relative; 
+		position:relative;
 	}
 
-	div#viewer { 
+	div#viewer {
 		height:350px;
-		position:relative; 
+		position:relative;
 	}
 
 	img{
-		
+
 		position:absolute;
 	}
 
@@ -40,9 +40,9 @@
 	img#image2{	left:600px;	top:0px;	}
 	img#image3{	left:1200px;	top:0px;	}
 	img#image4{	left:1800px;	top:0px;	}
-			
-			
-	/*--------   ul li CSS ------------ */		
+
+
+	/*--------   ul li CSS ------------ */
 	#btnGroup {
 		position:absolute;
 		bottom:2%;
@@ -50,17 +50,17 @@
 		margin:0;
 		padding:0;
 	}
-			   
+
 	#btnGroup li {
 		float:left;
-		width:16px; 
-		height:16px;			
+		width:16px;
+		height:16px;
 		list-style:none;
-		margin-right:6px;	
+		margin-right:6px;
 		background-color:#60F;
 		cursor:pointer;
 	}
-					
+
 	ul#btnGroup li a{
 		text-decoration:none;
 		text-align:center;
@@ -74,44 +74,32 @@
 	ul#btnGroup li a:hover{	background:#CCFF00;	}
 
 </style>
-</head>  
-    
+</head>
+
 <body>
 
 	<div id="slider">
-
 		<div id="viewer">
 			<img id="image1" src="image/slide1.jpg" alt="">
 			<img id="image2" src="image/slide2.jpg" alt="">
-		</div> 
-		
+		</div>
 	  <ul id="btnGroup">
 			<li id="btn0"><a href="image/slide1.jpg">1</a></li>
-			<li id="btn1"><a href="image/slide2.jpg">2</a></li>  
+			<li id="btn1"><a href="image/slide2.jpg">2</a></li>
 	   </ul>
-		
 	</div>
 
-	<!---------- jQuery code Start ---------->        
+	<!---------- jQuery code Start ---------->
 	<script>
 		$("#btn0").on('click', function() {
-			$("#viewer").animate({left: -600})
+			$("#viewer").animate({ left: 0 })
 			event.preventDefault();
 		})
-
 		$("#btn1").on('click', function() {
-			$("#viewer").animate({left: 0})
+			$("#viewer").animate({ left: -600 })
 			event.preventDefault();
 		})
-			
-			
-			
-			 
-		</script>
-		
-		
-		
-
+	</script>
 
 </body>
 </html>

@@ -107,13 +107,13 @@
     </div>
 
     <script>
-
-       
-
+      $(".tab_menu li span").on('click', function() {
+        $(".tab_menu li div").hide();
+        $(this).next().show();
+        $(".tab_menu li").removeClass('on')
+        $(this).parent().addClass("on")
+      })
     </script>
-
-
-
 
 </body>
 </html>

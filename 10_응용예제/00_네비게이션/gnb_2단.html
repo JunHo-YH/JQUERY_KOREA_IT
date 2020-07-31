@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <title>2단 네비게이션</title>
     <style>
-        ul { margin: 0; padding: 0;}
-        ul { list-style: none;}
-        #gnb > li {position: relative; width: 150px; height: 50px; float: left;}
-        #gnb > li > a { display: block; height: 50px;  border: 1px solid #000;}
+        ul { margin: 0; padding: 0; }
+        li { list-style: none; }
+        /* 주메뉴 */
+        #gnb > li { position: relative; width: 150px; height: 50px; float: left;}
+        #gnb > li > a { display: block; height: 50px; border: 1px solid #000;  }
         /* 서브메뉴 */
-        #gnb ul { position: absolute; top: 51px; left: 0;;
-                width: 200px; border: 1px solid #000; background: #fff;}    
-        #gnb u li {padding: 10px; }
+        #gnb ul { position: absolute; top: 51px; left: 0;
+                width: 200px; border: 1px solid #000; background: #fff; }
+        #gnb ul li { padding: 10px; }
     </style>
-    <script src="../../../jquery-3.5.1.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#gnb ul").hide();
-            $("#gnb > li").hover(function() {
-                $(this).children("ul").stop().fadeIn();
-            }, function() {
-                $(this).children("ul").stop().fadeOut();
+            $("#gnb > li").mouseenter(function() {
+              $(this).children("ul").stop().fadeIn();
+            }).mouseleave(function() {
+              $(this).children("ul").stop().fadeOut();
             })
         })
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <ul id="gnb">
-        <li><a href="">Menu1</a>
-            <ul>
-                <li><a href="#">Menu1-1</a>
-                <li><a href="#">Menu1-2</a>
-                <li><a href="#">Menu1-3</a>
-            </ul>
-        </li>
-        <li><a href="">Menu2</a>
-            <ul>
-                <li><a href="#">Menu2-1</a>
-                <li><a href="#">Menu2-2</a>
-                <li><a href="#">Menu2-3</a>
-            </ul>
-        </li>
-        <li><a href="">Menu3</a>
-            <ul>
-                <li><a href="#">Menu3-1</a>
-                <li><a href="#">Menu3-2</a>
-                <li><a href="#">Menu3-3</a>
-            </ul>
-        </li>
+      <li><a href="#">Menu1</a>
+        <ul>
+          <li><a href="#">menu1-1</a></li>
+          <li><a href="#">menu1-2</a></li>
+          <li><a href="#">menu1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="">Menu2</a>
+        <ul>
+          <li><a href="#">menu2-1</a></li>
+          <li><a href="#">menu2-2</a></li>
+          <li><a href="#">menu2-3</a></li>
+        </ul>
+      </li>
+      <li><a href="">Menu3</a>
+        <ul>
+          <li><a href="#">menu3-1</a></li>
+          <li><a href="#">menu3-2</a></li>
+          <li><a href="#">menu3-3</a></li>
+        </ul>
+      </li>
     </ul>
-</body>
+  </body>
 </html>

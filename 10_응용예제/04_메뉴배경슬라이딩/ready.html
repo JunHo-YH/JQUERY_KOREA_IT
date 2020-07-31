@@ -45,28 +45,24 @@
 	</div>
 
 	<script>
-	
-			$("#menu_sl li").mouseover(function(){
-			
+
+			$("#menu_sl li").on('mouseenter', function(){
 				//  메뉴 배경이 이동할 위치값 구하기 position() 이용
-				
-				
-				// 이펙트 효과적용 
-				
-				
-				// 마우스 hover 시 CSS를 적용하도록 
+				var liPos = $(this).position().top;
+				// console.log(liPos)
+				// 이펙트 효과적용
+				$(".arrow").stop().animate({ top: liPos })
+				// 마우스 hover 시 CSS를 적용하도록
 				// 현재요소에만 클래스네임 on 추가
-				
-				
-				
-				
+				$("#menu_sl li").removeClass("on")
+				$(this).addClass("on")
 			});
-			
+
 	</script>
-	
-	
-	
-	
-	
+
+
+
+
+
 </body>
 </html>

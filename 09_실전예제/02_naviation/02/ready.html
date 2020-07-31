@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>어디서나 펼쳐지는 내비게이션</title>
-<script src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
 
 <style>
 
@@ -63,34 +63,7 @@
 	<!---------- jQuery code Start ---------->
 	<script>	
 	
-		/* 할 일 목록을 적어보세요 
-			1. #home을 클릭하면 #menu가 나왔다가 들어가도록.
-			2. #menu li를 롤오버시 투명 애니메이션 적용
-			3. #home에 진입해서 위아래로 마우스를 움직일 경우
-				#container가 따라다니도록.
-		
-		*/
-
-		$("#home").toggle(function() {
-			$("div #menu:not(:animated)").animate({left: 50}, 300);
-		}, function() {
-			$("div #menu:not(:animated)").animate({left: -600}, 300);
-		}).on("mousemove", function() {
-			if(event.clientY <= $(this).height() / 2) {
-				$("#container").css({top: 0});
-
-			}else{
-				$("#container").css({ top: event.clientY - $(this).height() / 2 })
-			}
-		})
-
-
-
-		$("menu li").hover(function() {    //hover는 함수가 반드시 2개만 들어가야 한다.
-			$(this).stop().animate({opacity: 1})
-		}, function() {
-			$(this).stop().animate({opacity: 0.7})
-		})
+		/* 할 일 목록을 적어보세요 */
 	   
 	   
 	   

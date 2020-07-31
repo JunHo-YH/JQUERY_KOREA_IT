@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>말풍선 마우스 따라다니기</title>
+<meta charset="utf-8">
+<style>
+
+	body {font-family:dotum;}
+
+	/* CSS 적용 */
+	#area {   }
+	#area > div { width: 300px; height: 200px; float: left;
+								margin: 50px 50px 0 50px; }
+	#area > div:nth-child(1) { background: red; }
+	#area > div:nth-child(2) { background: blue; }
+	#area > div:nth-child(3) { background: green; }
+
+	/* 마우스를 따라다니기 위해서 position 속성 적용 */
+	#tip { position: absolute; padding: 10px 20px;	border: 1px solid #000;
+				 background: #fff; }
+
+</style>
+<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+	<div id="area">
+		<div data-title="빨간 말풍선"></div>
+		<div data-title="파란 말풍선"></div>
+		<div data-title="초록 말풍선"></div>
+	</div>
+	<div id="tip"></div>
+	<script>
+	//초기설정
+	$("#tip").hide();
+	// 마우스 진입
+	$("#area div").on('mouseenter', function() {
+		$("#tip").text( $(this).data("title") ).show();
+	}).on('mouseleave', function() {
+		$("#tip").hide();
+	}).on('mousemove', function() {
+		$("#tip").css({ left: event.pageX+10, top: event.pageY+10 })
+	})
+
+	</script>
+</body>
+</html>

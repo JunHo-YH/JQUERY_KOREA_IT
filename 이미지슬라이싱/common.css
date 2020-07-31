@@ -1,0 +1,8 @@
+@charset "utf-8";
+#wrap { position: relative; width: 640px; height: 405px;
+      background: #a5f08f; }
+#wrap > div { position: absolute; top: 0; width: 320px; height: 405px;
+            background: url(coffee.jpg) no-repeat;
+            }
+#wrap > .slice1 { left: 0; }
+#wrap > .slice2 { right: 0; } /*배경위치적용 */

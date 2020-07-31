@@ -1,21 +1,19 @@
-body, ul { margin: 0; padding: 0;}
-li { list-style: none;}
-a { text-decoration: none;}
-
+@charset "utf-8";
+/* 초기화 */
+body, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
 /* wrap */
-#wrap { width: 537px; margin: 50px auto 0;}
-
-
+#wrap { width: 537px; margin: 50px auto 0;  }
 /* gnb 공통 */
-#gnb li{ width: 179px; height: 48px;}
-#gnb li a {display: block; width: 179px; height: 48px;
-            line-height: 48px; text-indent: 30px;
-            background: url(images/btn.png) no-repeat;
-            color: #fff;}
-
+#gnb li { width: 179px; height: 48px; }
+#gnb li a { display: block; width: 179px; height: 48px;
+          text-indent: 30px; line-height: 48px;
+          font-weight: bold;
+          background: url(images/btn.png) no-repeat;
+          color: #fff; }
 /* gnb 개별 */
 #gnb > li { float: left; }
-
 /* snb */
-.snb li { position: relative;}
-.snb .snb { position: absolute;top: 0; left: 179px}
+.snb li { position: relative; }
+.snb .snb { position: absolute; top: 0; left: 179px; }

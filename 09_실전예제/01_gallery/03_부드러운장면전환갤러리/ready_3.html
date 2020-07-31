@@ -30,30 +30,14 @@
 <body>
 
 <div class="fadeShow">
-     <img src="slide1.jpg" alt="image1" class="active" />
+     <img class="active" src="slide1.jpg" alt="image1" />
      <img src="slide2.jpg" alt="image2" />
-	 <img src="slide3.jpg" alt="image3" />
-	 <img src="building.jpg" alt="건물" />
-	 
+     <img src="slide3.jpg" alt="image3" />
 </div>
 
 
 	<!---------- jQuery code Start ---------->
 	<script>
-
-		function fading() {
-			$(".fadeShow img:eq(1)").addClass('active')
-									.css({opacity: 0})
-									.animate({opacity: 1},1000, function() {
-										$(".fadeShow").append($(".fadeShow img:eq(0)"))
-										$(".fadeShow img:last").removeClass("active");
-									})
-									
-
-		}
-		setInterval(fading, 2000)
-
-	
 		
 		/* 할 일 목록
 		

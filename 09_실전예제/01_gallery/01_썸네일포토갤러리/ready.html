@@ -8,12 +8,12 @@
 
 	body {
 		margin: 20px auto;
-		padding: 0;	
+		padding: 0;
 		width: 620px;
 		background: #192839;
 	}
 	.thumbs {
-	   width: 100px;	
+	   width: 100px;
 	   float: left;
 	}
 	.thumbs img {
@@ -32,7 +32,7 @@
 		padding: 5px;
 		margin-left: 110px;
 	}
-	
+
 </style>
 </head>
 
@@ -47,36 +47,29 @@
 
 	<!---------- jQuery code Start ---------->
 	<script>
-		
+
 		/* 할 일 목록
-		
+
 		Tip1. animate()의 투명도 속성의 이용
-		
-		1. 클래스가 thumbs이 div의 a 태그를 클릭시 a 태그의 href 속성이 
-			아이디 largeImg 요소의 img 태그의 src 속성을 담도록 
+
+		1. 클래스가 thumbs이 div의 a 태그를 클릭시 a 태그의 href 속성이
+			아이디 largeImg 요소의 img 태그의 src 속성을 담도록
 			변수를 설정하고, attr() 을 이용해 적용
-			
+
 		2. 체이닝을 하며 애니메이션 이펙트 추가
-		
+
 		3. a 태그의 값을 제거
 		*/
-
 		$(".thumbs a").on('click', function() {
 			var imgPath = $(this).attr("href");
 			var altText = $(this).attr("title");
-			$("#largeImg img").attr({src: imgPath, alt: altText})
-								.css({ opacity: 0})
-								.stop() // :not(:animate)를 하게되면 다른 게 작동이 안되기 때문에 stop()이 적절하다.
-								.animate({opacity: 1}, 1000)
+			$("#largeImg img").attr({ src: imgPath, alt: altText })
+												.css({ opacity: 0 })
+												.stop()
+												.animate({ opacity: 1 }, 1000)
 			event.preventDefault();
 		})
-
-
-		
-		
-		
-		
 	</script>
-	
+
 </body>
 </html>

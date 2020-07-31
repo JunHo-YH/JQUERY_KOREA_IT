@@ -5,30 +5,35 @@
 
 	* { margin:0; padding:0; }
 	div { padding: 15px; background: yellow; }
-	p { margin-top:10px; }
+	p { margin-top: 10px; }
 	p.hello { background: red; }
-	
+
 </style>
-<script src="js/jquery-1.7.2.min.js"></script>
+<script src="jquery-1.7.2.min.js"></script>
 </head>
 <body>
- 
+
 	<div>
 		<p class="hello">Hello World</p>
 	</div>
 	<p class="first"></p>
 	<p class="last"></p>
- 
+
 	<script>
-	
-		
-	
+			// var posY = $(".hello").position().top;
+			// var posX = $(".hello").position().left;
+			var pos = $(".hello").position();
+			var offsetY = $(".hello").offset().top;
+			var offsetX = $(".hello").offset().left;
+			// $(".first").text(posY + ", " + posX)
+			$(".first").text(pos.left + ", " + pos.top)
+			$(".last").text(offsetY + ", " + offsetX)
 	</script>
-	
-	
-	
-	
-	
- 
+
+
+
+
+
+
 </body>
 </html>

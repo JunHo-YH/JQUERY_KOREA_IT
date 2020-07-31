@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>scrollLeft / scrollTop</title>
+    <style>
+      body { height: 2000px; }
+      #box1 { overflow: scroll; width: 300px; height: 300px; border: 5px solid #000; }
+      #box2 { width: 600px; height: 600px;
+              background: linear-gradient(45deg, #b2f0aa 0%, #5c8eff 50%, #c62279 100%); }
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+  </head>
+  <body>
+      <div id="box1">
+        <div id="box2"></div>
+      </div>
+      <script>
+          $("#box1").scrollLeft(150).scrollTop(150)
+          console.log($(window).scrollTop())
+
+      </script>
+  </body>
+</html>
