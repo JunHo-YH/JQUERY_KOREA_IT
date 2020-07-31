@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+/* Reset */
+
+html, body{
+    height: 100%;
+}
+
+body, h1, h2, h3, h4, div, p, ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+small{
+    font-size: 1em;
+}
+
+.hidden{
+    position: absolute;
+    left: -9999px;
+}
+
+/* Fonts */
+
+body{
+    font-family: 'Noto Sans KR', 'Dotum', '돋움', sans-serif;
+}
+
+/* Header */
+
+#header{
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    transition: .5s;
+}
+
+#header .layout{
+    max-width: 1500px;
+    min-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header .logo{
+    width: 134px;
+    height: 33px;
+    float: left;
+    margin: 30px 0;
+}
+
+#header .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.png) 0 0 no-repeat;
+    text-indent: -9999px;
+}
+
+.gnb > ul > li > a,
+.menu_right ul li a{
+    color: #fff;
+}
+
+.menu_right{
+    float: right;
+    margin: 40px 0;
+}
+
+.menu_right ul{
+    overflow: hidden;
+}
+
+.menu_right ul li{
+    float: left;
+    padding: 0 10px;
+    position: relative;
+}
+
+.menu_right ul li::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    top: 6px;
+    left: 0;
+    background: #aaa;
+}
+
+.menu_right ul li:first-child::before,
+.menu_right ul li:last-child::before{
+    display: none;
+}
+
+.menu_right ul li a{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.menu_right .eng{
+    display: block;
+    width: 46px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid #aeaeae;
+    margin: 3px 0 0 27px;
+}
+
+.gnb{
+    position: absolute;
+    width: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+.gnb > ul > li{
+    float: left;
+    width: 180px;
+}
+
+.gnb > ul > li > a{
+    display: block;
+    font-size: 20px;
+    padding: 36px 0;
+}
+
+#header .gnb .gnb_s{
+    display: none;
+}
+
+/* Header Drop Down CSS */
+
+#header.on{
+    background: #fff;
+}
+
+#header.on .logo a{
+    background: url(../images/logo.png) 0 -33px no-repeat;
+}
+
+#header.on .gnb > ul > li > a,
+#header.on .menu_right ul li a{
+    color: #666;
+}
+
+#header.on .menu_right ul li::before{
+    background: #666;
+}
+
+#header.on .menu_right .eng{
+    border-color: #666;
+}
+
+#header.on .gnb > ul > li > a{
+    color: #24629b;
+}
+
+#header.on .gnb .gnb_s{
+    display: block;
+    margin-top: 20px;
+}
+
+.gnb_s > li{
+    margin-bottom: 16px;
+}
+
+.gnb_s > li > a{
+    font-size: 16px;
+    color: #333;
+}
+
+.gnb_s > li > a::before{
+    content: '· ';
+}
+
+.gnb_s ul{
+    padding-left: 12px;
+}
+
+.gnb_s ul li{
+    margin: 6px 0;
+}
+
+.gnb_s ul li a{
+    font-size: 15px;
+    color: #666;
+}
+
+.gnb_s ul li a:hover{
+    color: #24629b;
+}
+
+.header_bg{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 378px;
+    top: 105px;
+    left: 0;
+    background: #f1f1f3;
+}
+
+/* Footer */
+
+#footer{
+    background: #3e3e3e;
+}
+
+#footer .layout{
+    min-width: 1200px;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 35px 0;
+    background: url(../images/footer_logo.png) 0 35px no-repeat;
+}
+
+#footer a,
+#footer p,
+#footer small{
+    color: #8d8d8d;
+}
+
+#footer .ft_info{
+    float: left;
+    padding-left: 250px;
+}
+
+.ft_info ul{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.ft_info ul li{
+    float: left;
+    margin-left: 33px;
+    position: relative;
+}
+
+.ft_info ul li::before{
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -16px;
+    margin-top: -7px;
+    width: 1px;
+    height: 14px;
+    background: #8d8d8d;
+}
+
+.ft_info ul li:first-child{
+    margin-left: 0;
+}
+
+.ft_info ul li a{
+    font-size: 14px;
+}
+
+.ft_info ul li a:hover{
+    text-decoration: underline;
+}
+
+.ft_info p,
+.ft_info small{
+    font-size: 13px;
+}
+
+.ft_info small span{
+    text-transform: uppercase;
+}
+
+#footer .go_link{
+    float: right;
+}
+
+#footer .go_link a{
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+#footer .go_link .facebook{
+    background: url(../images/ico_common.png) 0 -100px no-repeat;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    vertical-align: bottom;
+}
+
+#footer .go_link .prugio{
+    border: 1px solid #626262;
+    width: 127px;
+    height: 35px;
+    background: url(../images/prugio_bi.png) 20px 11px no-repeat;
+    position: relative;
+}
+
+#footer .go_link .prugio::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 6px;
+    height: 11px;
+    background: url(../images/ico_common.png) -470px -180px no-repeat;
+}

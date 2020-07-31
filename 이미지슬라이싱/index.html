@@ -4,11 +4,22 @@
     <meta charset="utf-8">
     <title>이미지 쪼개기</title>
     <link rel="stylesheet" href="common.css">
+    <script src="jquery-3.5.1.min.js"></script>
   </head>
   <body>
     <div id="wrap">
       <div class="slice1"></div>
       <div class="slice2"></div>
     </div>
+    <script>
+      $("#wrap").hover(function() {
+        $('.slice1').animate({ left: -320 })
+        $('.slice2').animate({ right: -320 })
+      }, function() {
+        $('.slice1').animate({ left: 0 })
+        $('.slice2').animate({ right: 0 })
+      })
+
+    </script>
   </body>
 </html>

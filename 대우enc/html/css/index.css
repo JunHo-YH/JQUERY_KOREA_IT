@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/* Main CSS */
+
+#main_cont{
+    height: 100%;
+    position: relative;
+}
+
+/* Main Visual */
+
+.video{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#video_movie{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: calc(50% - 960px); */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#video_control{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 40px;
+    bottom: 50px;
+    background: url(../images/video_control.png) -24px 0 no-repeat;
+    border: none;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#main_cont .slogan{
+    position: absolute;
+    left: 40px;
+    bottom: 90px;
+    z-index: 9;
+}
+
+#main_cont .slogan p{
+    color: #fff;
+}
+
+#main_cont .slogan .big_txt{
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+#main_cont .slogan .small_txt{
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+/* Main Quick */
+
+.main_quick{
+    position: absolute;
+    right: 0;
+    bottom: 85px;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.main_quick .news_room{
+    float: left;
+    background: #fff;
+    height: 210px;
+    /* width: 716px; */
+    overflow: hidden;
+}
+
+.news_room h2{
+    width: 65px;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.news_room h2 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: #000;
+    padding-top: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.news_room h2 a::after{
+    content: '';
+    background: url(../images/news_ico.png) -6px 0 no-repeat;
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 3px);
+}
+
+.news_room div{
+    float: left;
+    width: 0;
+    transition: width .5s;
+}
+
+.news_room.open div{
+    width: 651px;
+}
+
+.news_room.open h2 a::after{
+    background-position-x: 0;
+}
+
+.news_room ul{
+    overflow: hidden;
+    height: 210px;
+}
+
+.news_room ul li{
+    float: left;
+    width: 216px;
+    height: 100%;
+    border-left: 1px solid #eee;
+}
+
+.news_room ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #000;
+    position: relative;
+}
+
+.news_room ul li a span{
+    font-size: 15px;
+    color: #999;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+/* Main Info */
+
+.main_info{
+    float: right;
+}
+
+.main_info h4 a{
+    display: block;
+    width: 105px;
+    height: 105px;
+}
+
+.main_info h4 a span{
+    display: block;
+    font-size: 14px;
+    color: #bdfbfd;
+    font-weight: 300;
+    padding: 73px 0 0 12px;
+}
+
+.main_info h4:nth-of-type(1){
+    background: url(../images/right_btn_bg.png) 0 0 no-repeat;
+}
+
+.main_info h4:nth-of-type(2){
+    background: url(../images/right_btn_bg.png) -105px 0 no-repeat;
+}
+
+/* Aside */
+
+.aside_link{
+    display: block;
+    width: 170px;
+    position: absolute;
+    right: 0;
+    bottom: 300px;
+}
+
+.aside_link .go_youtube{
+    height: 240px;
+    background: #fff url(../images/main_banner3.jpg) 0 bottom no-repeat;
+}
+
+.aside_link .go_youtube a{
+    display: block;
+    padding: 20px;
+}
+
+.aside_link .go_youtube h3{
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.aside_link .go_youtube h3::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 2px;
+    background: #333;
+}
+
+.aside_link .go_youtube p{
+    color: #248dc5;
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    letter-spacing: -1px;
+}
+
+.aside_link .go_youtube p::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/banner_arrow.png) 0 0 no-repeat;
+}
+
+.aside_link .go_prugio{
+    height: 120px;
+    background: url(../images/main_banner.jpg) 0 0 no-repeat;
+    margin-top: 5px;
+}
+
+.aside_link .go_prugio a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.aside_link .go_prugio h3{
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    padding: 80px 0 0 20px;
+    position: relative;
+}
+
+.aside_link .go_prugio h3::after{
+    content: '';
+    width: 6px;
+    height: 10px;
+    background: url(../images/main_banner_ico2.png);
+    position: absolute;
+    top: 86px;
+    right: 25px;
+}
