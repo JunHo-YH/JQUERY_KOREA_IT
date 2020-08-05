@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* 초기화 */
+html, body { height: 100%; }
+body, h1, h2, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+.hidden { position: absolute; left: -9999px; }
+/* 헤더 */
+header { position: fixed; top: 0; left: 0;
+          width: 300px; height: 100%;
+          background: rgba(0, 0, 0, 0.7); }
+header h1 { padding: 50px 0;  color: #fff; text-align: center; }
+/*  네비 */
+nav ul li { text-align: center; line-height: 50px; }
+nav ul li a { padding: 10px 20px; color: #fff; font-size: 24px; }
+nav ul li.on a { background: #ff0; color: #000; }
+
+/* 섹션공통 */
+section { height: 100%; background: no-repeat center top / cover fixed;  }
+section > div { padding: 100px 0 0 350px;  }
+section h2 { font-size: 50px; }
+/* 섹션개별 */
+#content1 { background-image: url(../images/cat1.jpg); }
+#content2 { background-image: url(../images/cat2.jpg); }
+#content3 { background-image: url(../images/cat3.jpg); }

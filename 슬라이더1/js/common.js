@@ -14,23 +14,15 @@ $(".next").on('click', function() {
 })
 $(".prev").on('click', function() {
   className = $("#sliderList li:last").attr("class")
-  n = className.substr(6, 1) - 1;  // "1" - 1 = 0  ==> 계산이 된다.
+  n = className.substr(6, 1) - 1;
   if ( n == -1 ) n = 2;
   $("#btnNum span").removeClass('active');
   $("#btnNum span:eq("+ n +")").addClass('active');
   $("#sliderList").prepend($("#sliderList li:last"))
                   .css({ marginLeft: "-100%" })
                   .animate({ marginLeft: 0 })
+
 })
-
-timer = setInterval(function() {
-  $(".next").click();
-}, 3000)
-$("#btnPos span, #btnNum span").on('click', function() {
-  clearInterval(timer);
-})
-
-
 // 번호버튼 눌러서 슬라이더
 var liLength = $("#sliderList li").length;
 $("#btnNum span").on('click', function() {
@@ -49,3 +41,9 @@ $("#btnNum span").on('click', function() {
     $("#sliderList").css({ marginLeft: 0 })
   })
 })
+// timer = setInterval(function() {
+//   $(".next").click();
+// }, 3000);
+// $("#btnPos span, #btnNum span").on('click', function() {
+//   clearInterval(timer)
+// })
