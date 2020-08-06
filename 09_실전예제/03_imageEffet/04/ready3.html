@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>롤오버</title>
+    <style>
+      #photo div { position: relative; overflow: hidden;
+                  width: 476px; height: 505px; float: left; }
+      #photo div img { position: absolute; top: 0; left: 476px; }
+
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div id="photo">
+        <div class="photo1"><img src="images/fit_over.jpg" alt=""></div>
+        <div class="photo2"><img src="images/frm_over.jpg" alt=""></div>
+        <div class="photo3"><img src="images/ldn_over.jpg" alt=""></div>
+    </div>
+    <script>
+      var pathName, bgName;
+      $("#photo div").each(function() {
+        pathName = $(this).children().attr('src');
+        bgName = pathName.substr(7, 3)
+        // console.log(pathName, bgName)
+        $(this).css({ background: "url(images/"+bgName+".jpg)"  })
+      }).mouseenter(function() {
+        if (event.offsetX > $(this).width() / 2){
+          $(this).children("img").css({left: 476}).animate({left:0},200)
+        } else {
+          $(this).children("img").css({left:-476}).animate({left:0},200)
+        }
+
+      }).mouseleave(function() {
+        if (event.offsetX > $(this).width() / 2){
+          $(this).children("img").animate({left:476}, 200);
+        } else {
+          $(this).children("img").animate({left:-476}, 200);
+        }
+      })
+    </script>
+  </body>
+</html>
