@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>마우스에 반응하는 배경</title>
+  <style>
+    html, body { height: 100%; }
+    body { overflow: hidden;
+           background-image: url(star.jpg);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 120%;
+          }
+  </style>
+  <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <script>
+    $("body").on('mousemove', function() {
+      var bgX = ($(window).width() / 2 - event.pageX) / 20 - $(window).width() * 0.1;     // 왼쪽의 여백을 없애주기 위해서 0.1을 곱해준다.
+      var bgY = ($(window).height() / 2 - event.pageY) / 20 - $(window).height() * 0.1;
+
+      var bgPos = bgX +"px " + bgY + "px";
+      $(this).css({ backgroundPosition: bgPos })
+    })
+
+  </script>
+</body>
+</html>
